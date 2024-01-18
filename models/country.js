@@ -7,7 +7,12 @@ const countrySchema = new mongoose.Schema({
   capital: { type: String, required: true },
   language: { type: String, required: true },
   currency: { type: String, required: true },
-});
+},
+{
+versionKey:false,
+timestamps:true
+}
+);
 
 const Country = mongoose.model('Country', countrySchema);
 
