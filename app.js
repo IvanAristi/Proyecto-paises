@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Country = require('./models/country');
+const Country = require('./Backend/models/country');
 const app = express();
 
 // Configurar MongoDB Atlas
-require('./config/database');
+require('./Backend/config/database');
 
 // Middleware para parsear el cuerpo de la solicitud como JSON
 app.use(express.json());
