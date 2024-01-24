@@ -1,59 +1,87 @@
 const axios = require('axios');
-const Country = require('../models/country');
+const Country = require('../models/country.js');
 
-// Función para obtener datos de países desde la API GraphQL y guardarlos en MongoDB
-async function getAndSaveGraphQLCountries() {
+
+let isFetchingData = false;
+
+async function getAndSaveGraphQLCountries(req,res) {
+  if (isFetchingData) {
+    console.log('La función ya está en ejecución. Espere a que termine.');
+    return;
+  }
+
+  isFetchingData = true;
+
   try {
-    // Realiza una solicitud POST a la API GraphQL para obtener datos de países
+    const fail = await Country.find()
+    if(fail.length > 0){
+      return res.json({message: "los paises ya han sido creados"})
+    }
     const response = await axios.post('https://countries.trevorblades.com/', {
       query: `
-        query {
-          countries {
-            code
+      query {
+        countries {
+          code,
+          name,
+          continent {
             name
-            continent {
-              name
-            }
-            capital
-            language
-            currency
-          }
+          },
+          capital,
+          languages{
+            name
+          },
+          currency
         }
+      }
       `,
     });
 
-    // Extrae los datos de países de la respuesta
-    const countriesData = response.data.data.countries;
+    const countries = response.data.data.countries;
 
-    // Inserta los datos de países en la base de datos MongoDB
-    await Country.insertMany(countriesData);
-
-    console.log('Datos de países insertados correctamente en MongoDB');
+    countries.forEach(async (element) => {
+      const capital = element.capital;
+      const currency = element.currency;
+      const code = element.code
+      const language = element.languages.map((e) => e.name).join(', ');
+      const newCountry = new Country({
+        name: element.name,
+        continent: element.continent.name,
+        capital,
+        language,
+        currency,
+        code
+      });
+      await newCountry.save();
+    }
+    
+    );res.json(countries)
   } catch (error) {
-    // Maneja los errores y muestra un mensaje de error
     console.error('Error al obtener y guardar datos de la API GraphQL:', error.message);
+  } finally {
+    isFetchingData = false;
   }
 }
 
-// Función para insertar un nuevo país en la base de datos MongoDB
 async function insertCountry(req, res) {
   try {
-    // Obtiene los datos del país desde el cuerpo de la solicitud
     const newCountryData = req.body;
 
-    // Inserta el nuevo país en la base de datos MongoDB
     const newCountry = await Country.create(newCountryData);
-
-    // Devuelve el país recién creado como respuesta
+ 
     res.status(201).json(newCountry);
   } catch (error) {
-    // Maneja los errores y devuelve un mensaje de error
     console.error('Error al insertar un nuevo país:', error.message);
     res.status(500).json({ message: 'Error al insertar un nuevo país' });
   }
 }
 
+async function getAllCountries(_, res) {
+  const countries = await Country.find();
+  res.json(countries);
+}
+
 module.exports = {
   getAndSaveGraphQLCountries,
   insertCountry,
+  getAllCountries,
 };
