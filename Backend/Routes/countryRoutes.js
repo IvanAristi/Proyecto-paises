@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const countryController = require('../controller/countryController');
+const controller = require('../controller/countryController.js');
 
 // Ruta para obtener todos los países
-router.get('/countries', countryController.getGraphQLCountries);
+router.post('/countries', controller.getAndSaveGraphQLCountries);
+router.post('/Insert', controller.insertCountry);
+router.get('/countries',controller.getAllCountries);
 
 module.exports = router;
