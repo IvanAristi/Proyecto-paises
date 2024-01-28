@@ -4,7 +4,7 @@ Modelo de Datos y BD
 En esta fase, se estableció el modelo de datos para representar la información de los países. Se creó la base de datos MongoDB con los siguientes atributos en el modelo:
 
 
-![Modelo base de datos](/img/628138ce-6d34-465f-a4f5-5c617f2ee5ab.jpg);
+![Modelo base de datos](/img/imgMongo.png);
 
 
 Fase 1: Integración con la API GraphQL (countries.trevorblades)
