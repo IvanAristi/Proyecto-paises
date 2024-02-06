@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+}
+
+.container{
+    width: 100vw;
+    display: flex; 
+    height: 100vh;
+    position: fixed;
+    
+}
+
+.menu{
+    align-items: center;
+    background-color: rgb(41, 125, 64);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.search-bar{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+   /* margin-left: 80px;*/
+}
+input{
+    width: 500px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 30px;
+}
+div ul li{
+    font-size: 30px;
+    padding: 15px;
+    color: rgb(192, 192, 208);
+    list-style-type: none; 
+}
+
+
+
+
+
+
+
