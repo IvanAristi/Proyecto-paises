@@ -4,7 +4,7 @@ Modelo de Datos y BD
 En esta fase, se estableció el modelo de datos para representar la información de los países. Se creó la base de datos MongoDB con los siguientes atributos en el modelo:
 
 
-![Modelo base de datos](/img/628138ce-6d34-465f-a4f5-5c617f2ee5ab.jpg);
+![Modelo base de datos](/img/imgMongo.png);
 
 
 Fase 1: Integración con la API GraphQL (countries.trevorblades)
@@ -38,12 +38,13 @@ clona este repositorio en tu maquina local, en la terminal git bash utilizando e
 
 git clone enlace para clonar el repositorio.
 
-Cambiate a la rama Develop y ejecuta git pull para visualizar las ultimas actualizaciones.
 
-Estando en visual studio code abre una nueva terminal e instala las dependencias ejecutando:
-npm install.
+Abre una terminal en visual studio code y ejecuta npm install nodemon, luego ejecuta npm start para inicializar el servidor.
 
-Acontinuacion ejecuta node app.js
+Abre una nueva terminal, luego ingresa a la carpeta FrontEnd; luego ejecuta npm i para instalar todas las dependencias y seguido de esto ejecuta npm run dev
+
+Tendras corriendo tu aplicacion en tu navegador
+
 
 
 

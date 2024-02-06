@@ -1,28 +1,18 @@
-import { useEffect, useState } from "react"
-function App() {
-  const [state, setState] = useState([])
-  useEffect(() => {
-    fetch("http://127.0.0.1:3000/countries").then((res) => res.json())
-      .then(data => setState(data))
 
-  },
-    []
-  )
 
+import React from 'react'
+import Home from './components/Home'
+
+function App  ()  {
   return (
     <>
-      <h1>Countries</h1>
-      <section>
-        {state.map((element) => {
-          return <div key={element._id}>
-            <img src={`https://flagsapi.com/${element.code}/flat/64.png`} alt="flag" />
-            <h1>{element.name}</h1>
-          </div>
-
-        })}
-      </section>
+  <Home/>
+    
     </>
+
+
+
   )
 }
+export default App 
 
-export default App

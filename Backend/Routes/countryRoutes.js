@@ -6,5 +6,7 @@ const controller = require('../controller/countryController.js');
 router.post('/countries', controller.getAndSaveGraphQLCountries);
 router.post('/Insert', controller.insertCountry);
 router.get('/countries',controller.getAllCountries);
-
+router.put('/countries/:id', controller.updateCountries)
+router.get('/countries/:id', controller.getOneCountry)
+router.delete('/countries/:id', controller.deleteCountry)
 module.exports = router;
