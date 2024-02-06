@@ -80,8 +80,35 @@ async function getAllCountries(_, res) {
   res.json(countries);
 }
 
+async function updateCountries(req, res) {
+  const { id } = req.params;
+  await Country.findByIdAndUpdate(id, req.body);
+  res.status(200).json({ message: 'updated' });
+};
+async function getOneCountry(req, res){
+  const { id } = req.params;
+  const data = await Country.findById(id);
+  if (data != null) {
+    res.json({ data });
+  } else {
+    res.json({ message: "error al encontrar el id" });
+  }
+};
+const deleteCountry = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Country.findByIdAndDelete(id);
+    res.json({ message: "eliminado" });
+  } catch (error) {
+    res.json({ message: "error al eliminar" });
+  }
+};
+
 module.exports = {
   getAndSaveGraphQLCountries,
   insertCountry,
   getAllCountries,
+  updateCountries,
+  getOneCountry,
+  deleteCountry
 };
