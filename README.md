@@ -1,7 +1,7 @@
 
 # Página de Búsqueda de Países
 
-####¡Bienvenido a nuestra página de búsqueda de países!
+#### ¡Bienvenido a nuestra página de búsqueda de países!
 
 
 Esta aplicación web te permite explorar una amplia variedad de países de todo el mundo. Puedes buscar países por su nombre y ver su nombre y su respetiva bandera.
@@ -17,7 +17,7 @@ Esta aplicación web te permite explorar una amplia variedad de países de todo 
 
 
 
-#Modelo de Datos y BD
+# Modelo de Datos y BD
 
 
 En esta fase, se estableció el modelo de datos para representar la información de los países. Se creó la base de datos MongoDB con los siguientes atributos en el modelo:
@@ -29,7 +29,7 @@ En esta fase, se estableció el modelo de datos para representar la información
 Fase 1: Integración con la API GraphQL (countries.trevorblades)
 Se implementó la integración con la API GraphQL (countries.trevorblades) para obtener información de los países. Se realizaron solicitudes para obtener datos como bandera, nombre del país y continente, que se utilizarán en el Frontend.
 
-##Detalles de la Implementación:
+## Detalles de la Implementación:
 Se utilizaron las operaciones de consulta (query) de GraphQL para obtener datos específicos de los países.
 Se aseguró la correcta manipulación de los datos recibidos para adaptarlos al modelo de datos de la base de datos MongoDB.
 
@@ -37,27 +37,28 @@ Se aseguró la correcta manipulación de los datos recibidos para adaptarlos al 
 
 En esta fase, se han utilizado las siguientes tecnologías:
 
-##Modelo de Datos mongoDB
-MongoDB: Se eligió MongoDB como el sistema de gestión de base de datos NoSQL para almacenar la información de los países. MongoDB permite una estructura flexible para adaptarse al modelo de datos definido.
-##Tecnologias utilizadas
-###Mongoose:
+## Modelo de Datos mongoDB
+## MongoDB:
+ Se eligió MongoDB como el sistema de gestión de base de datos NoSQL para almacenar la información de los países. MongoDB permite una estructura flexible para adaptarse al modelo de datos definido.
+## Tecnologias utilizadas
+### Mongoose:
  Se utilizó Mongoose, una biblioteca de modelado de objetos MongoDB para Node.js, para facilitar la interacción con la base de datos MongoDB. Mongoose proporciona una capa de abstracción sobre las operaciones de MongoDB.
 Fase 2: Integración con las APIs (countries.trevorblades - GraphQL)
 En esta fase, se han utilizado las siguientes tecnologías:
 
 Integración con la API GraphQL (countries.trevorblades)
 
-###Node.js:
+### Node.js:
  Se ha utilizado Node.js como entorno de ejecución para el backend de la aplicación.
 Express: Express se utilizó como el framework de Node.js para construir el servidor web que maneja las solicitudes y respuestas.
 
-###Apollo Server:
+### Apollo Server:
  Apollo Server se utilizó para implementar un servidor GraphQL en Node.js. Facilita la integración con la API GraphQL de countries.trevorblades.
 
-###React:
+### React:
 Se utilizo react para construir interfaces de usuario, en este caso, para crear componentes reutilizables.
 
-###useState:
+### useState:
  Es un hook de React que permite agregar estado a los componentes funcionales. Se utiliza aquí para manejar el estado de countries y searchTerm.
 
  ![pagina principal](/img/Home.png)
@@ -84,7 +85,7 @@ Por favor, asegúrate de seguir esta convención al crear y nombrar nuevas ramas
 
 
 
-###como usar y ejecutar el proyecto:
+### como usar y ejecutar el proyecto:
 
 clona este repositorio en tu maquina local, en la terminal git bash utilizando el comando:
 
@@ -95,7 +96,7 @@ Abre una terminal en visual studio code y ejecuta npm install nodemon, luego eje
 
 Abre una nueva terminal, luego ingresa a la carpeta FrontEnd; luego ejecuta npm i para instalar todas las dependencias y seguido de esto ejecuta npm run dev
 
-#####Tendras corriendo tu aplicacion en tu navegador
+##### Tendras corriendo tu aplicacion en tu navegador!
 
 
 
