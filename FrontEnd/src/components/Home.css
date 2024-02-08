@@ -1,47 +1,88 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100vw;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
 }
 
-.container{
-    width: 100vw;
-    display: flex; 
-    height: 100vh;
-    position: fixed;
+.container {
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  background-color: #e3f4ff;
+}
+
+.menu {
+  align-items: center;
+  background-color: #676767;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+.search-bar {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  /* margin-left: 80px;*/
+}
+input {
+  width: 500px;
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 30px;
+  box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none; 
+  }
+
+
+div ul {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  width: 0 80px;
+  margin: 0px;
+  margin: 25px;
+  align-items: center;
+}
+
+
+#etiqueta{
+    flex: 1; /* Esto hace que los botones ocupen el mismo espacio dentro del contenedor */
+    margin: 5px; /* Espacio entre los botones */
+    padding: 10px; /* Ajusta el padding según sea necesario */
+    background-color: transparent;
+    color: white;
+    width: 220px;
+    border-radius: 10px; 
+    border: none;
+    text-align: left;
+}
+ 
+
+#logo{
+    flex: 1; /* Esto hace que los botones ocupen el mismo espacio dentro del contenedor */
+    margin: 5px; /* Espacio entre los botones */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    background-color: #DBDBDB ;
+    border-radius: 10px;
+    color: #6F6F6F;
+
+    width: 220px ;
+    border: none;
+    height: 50px;
     
 }
-
-.menu{
-    align-items: center;
-    background-color: rgb(41, 125, 64);
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+#etiqueta:hover{
+background-color: #FFFFFF;
+ color:#878787 ;
 }
-.search-bar{
-    text-align: center;
-    width: 100%;
-    height: 50px;
-   /* margin-left: 80px;*/
-}
-input{
-    width: 500px;
-    margin-top: 20px;
-    height: 40px;
-    border-radius: 30px;
-    font-size: 30px;
-}
-div ul li{
-    font-size: 30px;
-    padding: 15px;
-    color: rgb(192, 192, 208);
-    list-style-type: none; 
-}
-
-
-
 
 
 

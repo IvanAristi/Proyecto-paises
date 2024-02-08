@@ -24,10 +24,10 @@ const Home = () => {
       <div className="container">
           <aside className="menu">
               <ul>
-                  <li>Logo</li>
-                  <li>Home</li>
-                  <li>Crear Pais</li>
-                  <li>Gestionar Pais</li>
+                  <button id="logo">Logo</button>
+                  <a href='#'><button id="etiqueta" >Home</button></a>
+                  <a><button  id="etiqueta">Crear Pais</button></a>
+                  <a><button  id="etiqueta">Gestionar Pais</button></a>
               </ul>
           </aside>
 
