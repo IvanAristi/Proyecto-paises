@@ -61,7 +61,7 @@ Se utilizo react para construir interfaces de usuario, en este caso, para crear 
 ### useState:
  Es un hook de React que permite agregar estado a los componentes funcionales. Se utiliza aquí para manejar el estado de countries y searchTerm.
 
- ![pagina principal](/img/Home.png)
+ ![pagina principal](/img/home.png)
 
 # Estrategia de Ramificación
 
