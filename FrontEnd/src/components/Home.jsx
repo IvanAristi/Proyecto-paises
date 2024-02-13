@@ -42,7 +42,7 @@ const Home = () => {
               </div>
               <section className='Cards'>
                   {filteredCountries.map((country) => (
-                      <div key={country._id} >
+                      <div key={country._id} className="content">
                           <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt="flag" />
                           <h1>{country.name}</h1>
                       </div>

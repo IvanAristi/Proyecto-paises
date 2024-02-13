@@ -51,6 +51,24 @@ flex-wrap: wrap;
 }
 
 
+.Cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5PX;
+  width: 100%;
+  background-color: #E3F4FF;
+  align-items: center;
+  }
+  
+  .content{
+    background-color: #E3F4FF;
+    margin: 20px;
+    width: 20%;
+    align-items: center;
+  }
+  .content:hover{
+    background-color: rgb(0, 217, 255);
+  }
 
 
 .searchstyle {
