@@ -2,6 +2,8 @@ import './Home.css'
 import { useEffect, useState } from "react"
 
 
+
+
 const Home = () => {
   const [countries, setCountries] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
@@ -21,27 +23,26 @@ const Home = () => {
   )
 
   return (
-      <div className="container">
-          <aside className="menu">
-              <ul>
-                  <button id="logo">Logo</button>
-                  <a href='#'><button id="etiqueta" >Home</button></a>
-                  <a><button  id="etiqueta">Crear Pais</button></a>
-                  <a><button  id="etiqueta">Gestionar Pais</button></a>
-              </ul>
-          </aside>
-
+      <div className="Home">
+     
           <div className="search-bar">
-              <input
+           
+           <div className='search'>
+              <input className='searchstyle'
                   type="text"
                   placeholder="Pais.."
+                  
                   value={searchTerm}
                   onChange={handleSearch}
               />
+              </div>
+
+              <div className='countries'>
               <h1>Countries</h1>
-              <section>
+              </div>
+              <section className='Cards'>
                   {filteredCountries.map((country) => (
-                      <div key={country._id}>
+                      <div key={country._id} >
                           <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt="flag" />
                           <h1>{country.name}</h1>
                       </div>
