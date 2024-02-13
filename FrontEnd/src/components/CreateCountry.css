@@ -1,0 +1,74 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+ 
+}
+
+.containerCreate {
+ 
+  margin-left: 330PX;
+  background-color: #E3F4FF;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+.Create{
+background-color: #E3F4FF;
+height: 15vw;
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+}
+ #query{
+  margin: 15px;
+  background-color: #3F7FE9;
+  color: beige;
+
+ }
+.codName{
+  display: flex;
+  background-color:  #E3F4FF;
+  height: 6vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Lenguage{
+  display: flex;
+  background-color:  #E3F4FF;
+  height: 2vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.butons{
+  background-color:  #E3F4FF;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buton1{
+  margin: 20px;
+  background-color: #C05757;
+  width: 80px;
+  color: beige;
+}
+#buton2{
+  margin: 20px;
+  background-color: #598D42;
+  width: 80px;
+  color: beige;
+}
+
+
+
+
+
+
+
