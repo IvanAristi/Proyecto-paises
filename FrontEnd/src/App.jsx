@@ -15,6 +15,7 @@ function App() {
        
 
         <Routes>
+        <Route path="/" element={<Home />}/>
          <Route path="/ManageCountry" element={<ManageCountry />} />
           <Route path="/Countries" element={<Home />} />
           <Route path="/CreateCountry" element={<CreateCountry />} />
