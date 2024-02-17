@@ -28,14 +28,21 @@ const Home = () => {
           <div className="search-bar">
            
            <div className='search'>
-              <input className='searchstyle'
+           <div  className='searchstyle' >
+            <div className='count'>
+            <span id='pais' >Pais</span>
+           <input 
                   type="text"
-                  placeholder="Pais.."
-                  
+                 placeholder='escriba el pais que desea ver'
+                  className='buscador'
                   value={searchTerm}
                   onChange={handleSearch}
               />
+               </div>
+              <span id='lupa'>Buscar</span>
               </div>
+           </div>
+             
 
               <div className='countries'>
               <h1>Countries</h1>
