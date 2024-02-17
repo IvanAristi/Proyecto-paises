@@ -1,0 +1,45 @@
+.continent-filter{
+    background-color:#FFFFFF;
+    height: 25vw;
+    margin-left: 200px;
+    width: 40vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 30px;
+
+}
+
+.continent{
+    background-color:#FFFFFF;
+    height: 25vw;
+    width: 40vw;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.continent-filter img{
+    height: 6vw;
+    width: 8vw;
+    cursor: pointer;
+    margin: 10px;
+   background-color: #FFFFFF; 
+}
+.continents{
+height: 3vw;
+margin: 10px 10px;
+margin-top: 25px;
+background-color: #FFFFFF;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.continent-item{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+   
+    height: 8vw;
+}
