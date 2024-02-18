@@ -54,11 +54,11 @@ const Home = () => {
                 <div className='search'>
                     <div className='searchstyle'>
                         <div className='count'>
-                            <span id='pais'>Pais</span>
+                            <span id='pais'>País</span>
                             <input
                                 type="text"
-                                placeholder='escriba el pais que desea ver'
-                                className='buscador'
+                                placeholder='Escribe el país que deseas ver'
+                                className='Buscar'
                                 value={searchTerm}
                                 onChange={handleInputChange}
                                 onClick={handleInputClick}

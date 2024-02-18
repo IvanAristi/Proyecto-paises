@@ -24,7 +24,7 @@
     width: 8vw;
     cursor: pointer;
     margin: 10px;
-   background-color: #FFFFFF; 
+    background-color: #FFFFFF; 
 }
 .continents{
 height: 3vw;
@@ -33,13 +33,18 @@ margin-top: 25px;
 background-color: #FFFFFF;
 width: 100%;
 display: flex;
-justify-content: space-between;
+justify-content: space-between; 
 }
 
 .continent-item{
     display: flex;
     flex-direction: column;
-    margin: 5px;
-   
+    margin: 20px;
     height: 8vw;
+}
+
+.continent-item:hover {
+    border: 2px solid blue; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 }

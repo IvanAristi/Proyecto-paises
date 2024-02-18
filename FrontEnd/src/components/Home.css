@@ -1,100 +1,81 @@
-body,
-html {
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100vw;
-
 }
 
 .Home {
-
-  display: flex;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   background-color: #E3F4FF;
   margin-left: 300px;
   overflow: hidden;
-
 }
 
-
 .search-bar {
+  
   text-align: center;
   width: 100%;
   height: 50px;
   margin-top: 20px;
-  justify-content: center;
-  margin-left: 10px;
 }
 
-.Cards{
-display: flex;
-flex-wrap: wrap;
-}
-
-
- 
-
-.search{
+.Cards {
   display: flex;
-  /*margin-left: 240px;*/
- justify-content: center;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 100%;
+  background-color: #E3F4FF;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:#E3F4FF ;
-
+  background-color: #E3F4FF;
 }
 
-
-.countries{
+.countries {
   align-items: center;
   text-align: center;
   margin: 10px;
-  
+  overflow-y: auto; 
 }
 
-
-.Cards{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5PX;
-  width: 100%;
+.content {
   background-color: #E3F4FF;
+  margin: 20px;
+  width: 20%;
   align-items: center;
-  }
-  
-  .content{
-    background-color: #E3F4FF;
-    margin: 20px;
-    width: 20%;
-    align-items: center;
-  }
-  .content:hover{
-    background-color: rgb(0, 217, 255);
-  }
+}
 
+.content:hover {
+  background-color: rgb(0, 217, 255);
+}
 
 .searchstyle {
-  align-items: center;
   width: 700px;
   margin-top: 20px;
   margin-left: 10px;
-  align-items: center;
   height: 50px;
   border: none;
   display: flex;
   background-color: #FFFFFF;
   justify-content: space-between;
+  align-items: center;
   border-radius: 20px;
   font-size: 30px;
   box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.1);
 }
-.pais{
-  font-size: 10px;
+
+.pais {
+  font-size: 20px;
 }
-.count{
+
+.count {
   height: 4vw;
   display: flex;
   flex-direction: column;
@@ -102,32 +83,30 @@ flex-wrap: wrap;
   margin: 2px;
 }
 
-.buscador{
+.Buscar {
+  width: 300px; 
   border: none;
   width: 100%;
   outline: none;
-  margin: 3px; 
- 
- background-color:  #FFFFFF ;
-
-
+  margin: 3px;
+  background-color: #FFFFFF;
 }
+
 #lupa {
   background-color: #009CFF;
   font-size: 15px;
   text-align: center;
   align-items: center;
-  padding: 5PX;
+  padding: 5px;
   border-radius: 20px;
   height: 1.5vw;
-  margin: 7PX;
+  margin: 7px;
   width: 8vw;
   color: #FEFEFF;
-
   display: block;
-  
 }
-#pais{
+
+#pais {
   align-content: flex-start;
   font-size: 15px;
   width: 30px;
@@ -135,25 +114,10 @@ flex-wrap: wrap;
 }
 
 #input:focus {
-  border: none; /* Eliminar el borde predeterminado */
-    border-bottom: 2px solid blue; /* Agregar una línea inferior de 2px de grosor y color azul */
-    outline: none; /* Eliminar el resaltado predeterminado al enfocar */
-  }
+  border-bottom: 2px solid blue;
+  outline: none;
+}
 
-  .imagePias{
-    background-color: aqua;
-  }
-
-  
-
-
-
-
-
-
-    
-
-
-
-
-
+.imagePias {
+  background-color: aqua;
+}
