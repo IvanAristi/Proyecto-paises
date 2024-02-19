@@ -15,72 +15,56 @@ html {
   overflow: hidden;
 }
 
+.name{
+ background-color:#E3F4FF ;
+ width: 30vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
 .codigo{
-
-    background-color: #E3F4FF;
-    height: 10vw;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    }
-
-.capital{
-  display:flex ;
-  flex-direction: column;
+ 
+  height: 19vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputts{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   background-color: #E3F4FF;
-  height: 15vw;
   width: 100%;
-  justify-content: space-evenly;
-  margin: 20px;
-  align-items: center;
-}
-
-.continente{
-  background-color: #E3F4FF;
+  height: 33%;
   display: flex;
-  margin: 20px;
-  flex-direction: column;
- width: 30%;
- align-items: center;
-  justify-content: space-evenly;
-  height: 15vw;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .capital{
-  display: flex;
-  margin: 20px;
-  
-  flex-direction: column;
-  background-color: #E3F4FF;
-  justify-content: space-evenly;
-  height: 15vw;
+ background-color: #E3F4FF;
+ width: 30vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
-
 .updates{
-  background-color:  #E3F4FF;
-  height: 10vw;
+  background-color: #E3F4FF;
+  height: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#Conti{
-  margin-right: 30px;
 }
 
 #quer{
   margin: 15px;
   background-color: #3F7FE9;
   color: beige;
+}
 
- }
+
+
+
 
 
 

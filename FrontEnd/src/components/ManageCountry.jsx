@@ -82,6 +82,9 @@ const ManageCountry = () => {
   }
   return (
     <div className="containerManage">
+
+
+     
       <div className='codigo'>
         <label htmlFor="miInput">Codigo del Pais:</label>
         <input type="text" id="miInput" name="miInput" value={data.consulta} onChange={e => setData({ ...data, consulta: e.target.value })} />
@@ -92,8 +95,10 @@ const ManageCountry = () => {
       <div className='inputts'>
         {ok && <p>{ok}</p>}
 
+      
+     
         <div className='capital'>
-          <div>
+          <form>
             <label htmlFor="miInput">Codigo :</label>
             <input
               type="text"
@@ -101,38 +106,72 @@ const ManageCountry = () => {
               name="miInput"
               value={data.code}
               onChange={e => setData({ ...data, code: e.target.value })} />
+          </form>
 
-             
 
-          </div>
+          <form>
+            <label htmlFor="miInput">lengua :</label>
+            <input
+              type="text"
+              id="miInput"
+              name="miInput"
+              value={data.code}
+              onChange={e => setData({ ...data, code: e.target.value })} />
+          </form>
 
-          <div>
+
+
+          <form>
+            <label htmlFor="miInput">Capital:</label>
+            <input
+              type="text"
+              id="miInput"
+              name="miInput"
+              value={data.code}
+              onChange={e => setData({ ...data, code: e.target.value })} />
+          </form>
+
+
+  
+        </div>
+
+         <div className='name'>
+
+          <form  >
             <label htmlFor="miInput"> name:</label>
             <input type="text"
               id="miInput"
               name="miInput"
               value={data.name}
               onChange={e => setData({ ...data, name: e.target.value })} />
-          </div>
+          </form>
 
-          <div className='continente' >
-            <div>
+
+
+          
+            <form>
               <label htmlFor="miInput">continente:</label>
               <input type="text"
                 id="miInput"
                 name="miInput"
                 value={data.continent}
                 onChange={e => setData({ ...data, continent: e.target.value })} />
-            </div>
+            </form>
 
-            <div>
+
+            <form>
               <label htmlFor="miInput">language:</label>
               <input type="text" id='Conti' name="miInput" value={data.language} onChange={e => setData({ ...data, language: e.target.value })} />
+            </form>
+
             </div>
 
-          </div>
-
         </div>
+
+       
+
+      
+
 
         <div className='updates'>
           <div>
@@ -140,12 +179,15 @@ const ManageCountry = () => {
             <button id='buton2' onClick={update}>Actualizar</button>
           </div>
 
-        </div>
+          </div>
+
+
+
 
       </div>
 
 
-    </div>
+    
   );
 };
 
