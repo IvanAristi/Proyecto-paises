@@ -121,3 +121,8 @@ body, html {
 .imagePias {
   background-color: aqua;
 }
+.details{
+  position: fixed;
+  bottom: 2px;
+  background-color: gray;
+}
