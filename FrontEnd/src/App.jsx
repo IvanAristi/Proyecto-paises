@@ -3,7 +3,7 @@ import Home from './components/Home';
 import CreateCountry from './components/CreateCountry';
 import ManageCountry from './components/ManageCountry';
 import Menu from './components/Menu'
-
+import './App.css'
 
 function App() {
   return (
