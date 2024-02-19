@@ -101,6 +101,9 @@ const ManageCountry = () => {
               name="miInput"
               value={data.code}
               onChange={e => setData({ ...data, code: e.target.value })} />
+
+             
+
           </div>
 
           <div>
@@ -126,8 +129,6 @@ const ManageCountry = () => {
               <label htmlFor="miInput">language:</label>
               <input type="text" id='Conti' name="miInput" value={data.language} onChange={e => setData({ ...data, language: e.target.value })} />
             </div>
-
-
 
           </div>
 

@@ -1,8 +1,8 @@
 .continent-filter{
     background-color:#FFFFFF;
-    height: 25vw;
+    height: 30vw;
     margin-left: 200px;
-    width: 40vw;
+    width: 45vw;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -13,8 +13,8 @@
 
 .continent{
     background-color:#FFFFFF;
-    height: 25vw;
-    width: 40vw;
+    height: 30vw;
+    width: 45vw;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@
     height: 6vw;
     width: 8vw;
     cursor: pointer;
-    margin: 10px;
+    margin: 5px;
     background-color: #FFFFFF; 
 }
 .continents{
@@ -39,7 +39,7 @@ justify-content: space-between;
 .continent-item{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 15px;
     height: 8vw;
 }
 
