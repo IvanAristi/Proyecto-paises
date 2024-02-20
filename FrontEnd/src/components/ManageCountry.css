@@ -61,7 +61,13 @@ html {
   background-color: #3F7FE9;
   color: beige;
 }
-
+.name{
+  background-color:#E3F4FF ;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
 

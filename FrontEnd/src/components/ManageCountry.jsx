@@ -40,14 +40,14 @@ const ManageCountry = () => {
 
         }
       })
-      setData({
-        code:"",
-        name:"",
-        consulta:"",
-        continent:"",
-        language:"",
-        id:""
-      })
+    setData({
+      code: "",
+      name: "",
+      consulta: "",
+      continent: "",
+      language: "",
+      id: ""
+    })
   }
   const update = function () {
     const URL = "http://127.0.0.1:3000/countries/" + data.id
@@ -63,28 +63,28 @@ const ManageCountry = () => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newData )
+      body: JSON.stringify(newData)
     }
-    fetch(URL,settings)
-    .then(res=>{
-      if(res.ok){
-        setOk("Editado Correctamente")
-      }
-    })
+    fetch(URL, settings)
+      .then(res => {
+        if (res.ok) {
+          setOk("Editado Correctamente")
+        }
+      })
     setData({
-      code:"",
-      name:"",
-      consulta:"",
-      continent:"",
-      language:"",
-      id:""
+      code: "",
+      name: "",
+      consulta: "",
+      continent: "",
+      language: "",
+      id: ""
     })
   }
   return (
     <div className="containerManage">
 
 
-     
+
       <div className='codigo'>
         <label htmlFor="miInput">Codigo del Pais:</label>
         <input type="text" id="miInput" name="miInput" value={data.consulta} onChange={e => setData({ ...data, consulta: e.target.value })} />
@@ -95,47 +95,7 @@ const ManageCountry = () => {
       <div className='inputts'>
         {ok && <p>{ok}</p>}
 
-      
-     
-        <div className='capital'>
-          <form>
-            <label htmlFor="miInput">Codigo :</label>
-            <input
-              type="text"
-              id="miInput"
-              name="miInput"
-              value={data.code}
-              onChange={e => setData({ ...data, code: e.target.value })} />
-          </form>
-
-
-          <form>
-            <label htmlFor="miInput">lengua :</label>
-            <input
-              type="text"
-              id="miInput"
-              name="miInput"
-              value={data.code}
-              onChange={e => setData({ ...data, code: e.target.value })} />
-          </form>
-
-
-
-          <form>
-            <label htmlFor="miInput">Capital:</label>
-            <input
-              type="text"
-              id="miInput"
-              name="miInput"
-              value={data.code}
-              onChange={e => setData({ ...data, code: e.target.value })} />
-          </form>
-
-
-  
-        </div>
-
-         <div className='name'>
+        <div className='name'>
 
           <form  >
             <label htmlFor="miInput"> name:</label>
@@ -148,46 +108,46 @@ const ManageCountry = () => {
 
 
 
-          
-            <form>
-              <label htmlFor="miInput">continente:</label>
-              <input type="text"
-                id="miInput"
-                name="miInput"
-                value={data.continent}
-                onChange={e => setData({ ...data, continent: e.target.value })} />
-            </form>
+
+          <form>
+            <label htmlFor="miInput">continente:</label>
+            <input type="text"
+              id="miInput"
+              name="miInput"
+              value={data.continent}
+              onChange={e => setData({ ...data, continent: e.target.value })} />
+          </form>
 
 
-            <form>
-              <label htmlFor="miInput">language:</label>
-              <input type="text" id='Conti' name="miInput" value={data.language} onChange={e => setData({ ...data, language: e.target.value })} />
-            </form>
-
-            </div>
+          <form>
+            <label htmlFor="miInput">language:</label>
+            <input type="text" id='Conti' name="miInput" value={data.language} onChange={e => setData({ ...data, language: e.target.value })} />
+          </form>
 
         </div>
-
-       
-
-      
-
-
-        <div className='updates'>
-          <div>
-            <button id='buton1' onClick={Delete}>Eliminar</button>
-            <button id='buton2' onClick={update}>Actualizar</button>
-          </div>
-
-          </div>
-
-
-
 
       </div>
 
 
-    
+
+
+
+
+      <div className='updates'>
+        <div>
+          <button id='buton1' onClick={Delete}>Eliminar</button>
+          <button id='buton2' onClick={update}>Actualizar</button>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+
   );
 };
 
