@@ -103,12 +103,24 @@ const deleteCountry = async (req, res) => {
     res.json({ message: "error al eliminar" });
   }
 };
-
+const getByCode = async (req,res)=>{
+  try {
+    const {code} = req.params
+    const country = await Country.findOne({code}) 
+    if(country){
+      return res.json(country)
+    }
+    res.json("Pais no encontrado")
+  } catch (error) {
+    
+  }
+}
 module.exports = {
   getAndSaveGraphQLCountries,
   insertCountry,
   getAllCountries,
   updateCountries,
   getOneCountry,
-  deleteCountry
+  deleteCountry,
+  getByCode
 };

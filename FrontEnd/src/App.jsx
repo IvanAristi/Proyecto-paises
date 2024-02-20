@@ -1,18 +1,33 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import CreateCountry from './components/CreateCountry';
+import ManageCountry from './components/ManageCountry';
+import Menu from './components/Menu'
+import './App.css'
 
-
-import React from 'react'
-import Home from './components/Home'
-
-function App  ()  {
+function App() {
   return (
-    <>
-  <Home/>
-    
-    </>
+    <Router>
+      
+       
+     
+        <Menu/>
+       
 
-
-
-  )
+        <Routes>
+        <Route path="/" element={<Home />}/>
+         <Route path="/ManageCountry" element={<ManageCountry />} />
+          <Route path="/Countries" element={<Home />} />
+          <Route path="/CreateCountry" element={<CreateCountry />} />
+         
+        </Routes>
+        
+     
+    </Router>
+  );
 }
-export default App 
+
+export default App;
+
+
 

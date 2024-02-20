@@ -1,0 +1,29 @@
+
+input{
+    width: 280px;
+    height: 25px;
+   background-color: #EEEEEE ; 
+}
+
+label{
+    margin: 15px;
+}
+
+button{
+    margin: 15px;
+    width: 70PX;
+    
+}
+
+#buton1{
+    margin: 20px;
+    background-color: #C05757;
+    width: 80px;
+    color: beige;
+  }
+  #buton2{
+    margin: 20px;
+    background-color: #598D42;
+    width: 80px;
+    color: beige;
+  }

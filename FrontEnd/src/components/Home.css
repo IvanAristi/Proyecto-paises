@@ -1,48 +1,136 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
 }
 
-.container{
-    width: 100vw;
-    display: flex; 
-    height: 100vh;
-    position: fixed;
-    
+.Home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #E3F4FF;
+  margin-left: 300px;
+  overflow: hidden;
 }
 
-.menu{
-    align-items: center;
-    background-color: rgb(41, 125, 64);
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-.search-bar{
-    text-align: center;
-    width: 100%;
-    height: 50px;
-   /* margin-left: 80px;*/
-}
-input{
-    width: 500px;
-    margin-top: 20px;
-    height: 40px;
-    border-radius: 30px;
-    font-size: 30px;
-}
-div ul li{
-    font-size: 30px;
-    padding: 15px;
-    color: rgb(192, 192, 208);
-    list-style-type: none; 
+.search-bar {
+  
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
 }
 
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 100%;
+  background-color: #E3F4FF;
+}
 
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #E3F4FF;
+}
 
+.countries {
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  overflow-y: auto; 
+}
 
+.content {
+  background-color: #E3F4FF;
+  margin: 20px;
+  width: 20%;
+  align-items: center;
+}
 
+.content:hover {
+  background-color: rgb(184, 192, 194);
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+}
 
+.searchstyle {
+  width: 700px;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+  border: none;
+  display: flex;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 30px;
+  box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
 
+.pais {
+  font-size: 20px;
+}
+
+.count {
+  height: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2px;
+  
+}
+
+.Buscar {
+  width: 300px; 
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: #FFFFFF;
+}
+
+#lupa {
+  background-color: #009CFF;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
+  height: 1.5vw;
+  margin: 7px;
+  width: 8vw;
+  color: #FEFEFF;
+  display: block;
+}
+
+#pais {
+  align-content: flex-start;
+  font-size: 15px;
+  width: 30px;
+  margin: 2px;
+}
+
+#input:focus {
+  border-bottom: 2px solid rgb(222, 222, 236);
+  outline: none;
+}
+
+.imagePias {
+  background-color: aqua;
+}
+.details{
+  position: fixed;
+  bottom: 2px;
+  background-color:rgb(224, 224, 235);
+  border-radius: 20px;
+  padding: 30px 30px;
+  height: 50vh;
+  margin-left: 60%;
+}
