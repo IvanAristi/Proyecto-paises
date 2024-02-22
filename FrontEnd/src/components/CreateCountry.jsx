@@ -20,7 +20,7 @@ export const CreateCountry = () => {
       continent: "",
       language: ""
     });
-    setOk(false); // Limpiar el estado de ok
+    setOk(false);
   };
 
   const handleQueryClick = async () => {
@@ -55,13 +55,11 @@ export const CreateCountry = () => {
         setOk(true);
         swal("País encontrado", "¡Éxito!", "success");
       } else {
-        clear(); // Llamar a clear para limpiar los campos si no se encontró el país
-        setOk(false);
+        clear();
         swal("País no encontrado", "Código del país no existe", "warning");
       }
     } catch (error) {
       console.error("Error al consultar el país:", error);
-      setOk(false);
       swal("Error", "Hubo un error al consultar el país. Por favor, intenta nuevamente.", "error");
     }
   };
@@ -78,13 +76,21 @@ export const CreateCountry = () => {
     // Verificar si el país ya está creado
     try {
       const response = await axios.get(`http://127.0.0.1:3000/countryByCode/${newData.code}`);
-      if (response.status === 200) {
-        swal("País ya existe", "El país ya está creado.", "warning");
-        return;
-      }
-    } catch (error) {
-      return;
+      if (response.ok) {
+        setOk(true);
+      swal("País creado", "País creado correctamente.", "success");
+      clear();
+       
+    } else {
+      throw new Error('Error al crear el país.');
     }
+  }
+ catch (error) {
+  console.error("Error al consultar el país:", error);
+  swal("Error", "Hubo un error al consultar el país. Por favor, intenta nuevamente.", "error");
+}
+
+
 
     const URL = 'http://127.0.0.1:3000/Insert';
     const settings = {
@@ -118,7 +124,6 @@ export const CreateCountry = () => {
         <button type="button" id="query" onClick={handleQueryClick}>Consultar</button>
       </div>
       
-
       <form onSubmit={handleSubmit} ref={formRef}>
         <div className="codName">
           <div>
