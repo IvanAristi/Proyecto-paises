@@ -5,6 +5,8 @@ import Europa from '../assets/EUROPA.jpg'
 import Asia from '../assets/ASIA.jpg'
 import Oceania from '../assets/OCEANIA.jpg'
 import America from '../assets/AMERICA.png'
+import swal from 'sweetalert';
+
 
 
 import { useEffect, useState } from "react";
@@ -92,9 +94,9 @@ const Home = () => {
                 {details &&
                     <div className="details" >
                         <button onClick={()=>setDetails(null)}>Close</button>
-                        <p>name : {details.name}</p>
-                        <p>language : {details.language}</p>
-                        <p>continent : {details.continent}</p>
+                        <p>Name : {details.name}</p>
+                        <p>Language : {details.language}</p>
+                        <p>Continent : {details.continent}</p>
                         <img src={`https://flagsapi.com/${details.code}/flat/64.png`} alt="flag" />
                     </div>}
             </div>

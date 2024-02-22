@@ -13,10 +13,10 @@ export const Menu = () => {
             <button id='etiqueta'><Link to='/Countries'>Home</Link></button>
           </li>
           <li>
-            <button id='etiqueta'><Link to='/CreateCountry'>Crear Pais</Link></button>
+            <button id='etiqueta'><Link to='/CreateCountry'>Crear País</Link></button>
           </li>
           <li>
-            <button id='etiqueta'><Link to='/ManageCountry'>Gestionar Pais</Link></button>
+            <button id='etiqueta'><Link to='/ManageCountry'>Gestionar País</Link></button>
           </li>
         </ul>
       </aside>
