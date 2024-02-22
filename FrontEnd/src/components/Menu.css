@@ -32,6 +32,7 @@ div ul {
   border-radius: 10px; 
   border: none;
   text-align: left;
+  transition: transform 0.3s; 
 }
 
 .menu ul {
@@ -48,10 +49,23 @@ div ul {
 #etiqueta:hover {
   background-color: #FFFFFF;
   color: hsl(0, 0%, 53%);
+  transform: scale(1.1); 
 }
 
 #etiqueta:hover a {
-  color: hsl(0, 0%, 53%);
+  color: inherit; 
+  font-size: 1.1em; 
+}
+
+#etiqueta.selected {
+  font-size: 1.5em; 
+  background-color: #fff; 
+  color: hsl(0, 0%, 53%); 
+}
+
+#etiqueta.selected a {
+  font-size: 1em; 
+  color: #808080; 
 }
 
 .logo-container {
@@ -68,10 +82,3 @@ div ul {
   max-height: 80%; 
   align-self: center; 
 }
-
-
-
-
-
-
-
