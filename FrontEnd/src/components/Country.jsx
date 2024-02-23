@@ -18,8 +18,6 @@ export default function Country({ country, setDetails }) {
       .catch((error) => console.error(error));
   }, []);
 
-  console.log(fondo);
-
   return (
     <div className="content" onClick={() => setDetails({
         name: country.name,
