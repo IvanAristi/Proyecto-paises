@@ -34,7 +34,7 @@ const Home = () => {
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
-    setInputClicked(false);
+    setInputClicked(false); 
   };
 
   const continentMappings = {
