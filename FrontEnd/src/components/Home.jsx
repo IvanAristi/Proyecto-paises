@@ -34,7 +34,7 @@ const Home = () => {
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
-    setInputClicked(false); 
+    setInputClicked(false);
   };
 
   const continentMappings = {
@@ -71,7 +71,7 @@ const Home = () => {
                 className="Buscar"
                 value={searchTerm}
                 onChange={handleInputChange}
-               
+
               />
             </div>
             <span id="lupa" onClick={handleInputClick}>Buscar</span>
@@ -84,7 +84,7 @@ const Home = () => {
             onContinentChange={handleContinentChange}
           />
         )}
-        
+
         <section className="Cards">
           {countries.length &&
             filteredCountries.map((country) => {
@@ -95,17 +95,22 @@ const Home = () => {
         </section>
         {details && (
           <div className="details">
-            <button onClick={() => setDetails(null)}>Close</button>
-            <p>name : {details.name}</p>
-            <p>language : {details.language}</p>
-            <p>continent : {details.continent}</p>
-            <p>capital : {details.capital}</p>
-            <p>currency: {details.currency}</p>
-            <p>code : {details.code}</p>
-            <img
+            <div className="detailscontainer">
+              <button onClick={() => setDetails(null)}>Close</button>
+              <div className="p-1"><p className="button-d">name: </p> <p> {details.name}</p></div>
+              <div className="p-4"><p className="button-d">capital : </p> <p> {details.capital}</p></div>
+              <div className="p-2"><p className="button-d" >language : </p> <p> {details.language}</p></div>
+              <div className="p-3"><p className="button-d">continent : </p> <p> {details.continent}</p></div>
+              <div className="p-5"><p className="button-d">currency : </p> <p> {details.currency}</p></div>
+              <div className="p-6"><p className="button-d">code : </p> <p> {details.code}</p></div>
+              <img
               src={`https://flagsapi.com/${details.code}/flat/64.png`}
               alt="flag"
             />
+            </div>
+
+
+           
           </div>
         )}
       </div>
