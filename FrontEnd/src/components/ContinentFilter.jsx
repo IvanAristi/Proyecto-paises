@@ -6,8 +6,8 @@ const ContinentFilter = ({ continentMappings, onContinentChange }) => {
         <div className='continent-filter'>
             <div className='continent'>
                 <div className='continents'>
-                    <span>Filtrar por continente</span>
-                    <span>Limpiar</span>
+                    <span>filtrar por continente</span>
+                    <span>limpiar</span>
                 </div>
                 {Object.keys(continentMappings).map(key => (
                     <div key={key} className='continent-item'>

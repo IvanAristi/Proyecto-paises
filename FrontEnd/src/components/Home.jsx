@@ -18,7 +18,7 @@ const Home = () => {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API}/countries`)
+    fetch("http://127.0.0.1:3000/countries")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);
@@ -26,6 +26,10 @@ const Home = () => {
   const handleContinentChange = (continent) => {
     setSelectedContinent(continent);
     setInputClicked(false);
+  };
+
+  const handleInputClick = () => {
+    setInputClicked(true);
   };
 
   const handleInputChange = (event) => {
@@ -67,10 +71,10 @@ const Home = () => {
                 className="Buscar"
                 value={searchTerm}
                 onChange={handleInputChange}
-                onFocus={() => setInputClicked(true)}
-                onBlur={() => setInputClicked(false)}
+
               />
             </div>
+            <span id="lupa" onClick={handleInputClick}>Buscar</span>
           </div>
         </div>
 
