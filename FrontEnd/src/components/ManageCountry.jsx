@@ -16,7 +16,7 @@ const ManageCountry = () => {
   const [ok, setOk] = useState("");
 
   const consultar = function () {
-    const URL = "http://127.0.0.1:3000/countryByCode/" + data.consulta;
+    const URL = `${import.meta.env.VITE_API}/countryByCode/${data.consulta}`;
     fetch(URL)
       .then(res => res.json())
       .then(countryData => {
@@ -35,7 +35,7 @@ const ManageCountry = () => {
   };
 
   const Delete = function () {
-    const URL = "http://127.0.0.1:3000/countries/" + data.id;
+    const URL = `${import.meta.env.VITE_API}/countries/${data.id}`
     fetch(URL, { method: "DELETE" })
       .then(res => {
         if (res.ok) {
@@ -55,7 +55,7 @@ const ManageCountry = () => {
   };
 
   const update = function () {
-    const URL = "http://127.0.0.1:3000/countries/" + data.id;
+    const URL = `${import.meta.env.VITE_API}/countries/${data.id}`
     const newData = {
       code: data.code,
       name: data.name,
