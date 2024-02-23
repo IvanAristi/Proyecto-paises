@@ -23,8 +23,11 @@ body, html {
 }
 
 .Cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 100%;
+  background-color: #E3F4FF;
 }
 
 .search {
@@ -34,18 +37,18 @@ body, html {
   text-align: center;
   background-color: #E3F4FF;
 }
-/* 
+
 .countries {
   align-items: center;
   text-align: center;
-  p
+  margin: 10px;
   overflow-y: auto; 
-} */
+}
 
 .content {
   background-color: #E3F4FF;
-  /* margin: 20px;
-  width: 20%; */
+  margin: 20px;
+  width: 20%;
   align-items: center;
   position: relative;
   z-index: 20;

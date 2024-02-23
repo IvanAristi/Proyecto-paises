@@ -99,6 +99,9 @@ const Home = () => {
             <p>name : {details.name}</p>
             <p>language : {details.language}</p>
             <p>continent : {details.continent}</p>
+            <p>capital : {details.capital}</p>
+            <p>currency: {details.currency}</p>
+            <p>code : {details.code}</p>
             <img
               src={`https://flagsapi.com/${details.code}/flat/64.png`}
               alt="flag"
