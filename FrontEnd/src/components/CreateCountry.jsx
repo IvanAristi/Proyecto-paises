@@ -21,6 +21,7 @@ export const CreateCountry = () => {
       language: ""
     });
     setOk(false);
+    document.getElementById("codeInput").value = "";
   };
 
   const handleQueryClick = async () => {
@@ -76,22 +77,16 @@ export const CreateCountry = () => {
     // Verificar si el país ya está creado
     try {
       const response = await axios.get(`http://127.0.0.1:3000/countryByCode/${newData.code}`);
-      if (response.ok) {
-        setOk(true);
-      swal("País creado", "País creado correctamente.", "success");
-      clear();
-       
-    } else {
-      throw new Error('Error al crear el país.');
+      if (response.data && response.data.code === newData.code) {
+        swal("País ya existe", "El país ya está creado en la base de datos.", "warning");
+        return;
+      }
+    } catch (error) {
+
+      return;
     }
-  }
- catch (error) {
-  console.error("Error al consultar el país:", error);
-  swal("Error", "Hubo un error al consultar el país. Por favor, intenta nuevamente.", "error");
-}
 
-
-
+    // Si el país no existe, procede con la creación
     const URL = 'http://127.0.0.1:3000/Insert';
     const settings = {
       method: 'POST',
