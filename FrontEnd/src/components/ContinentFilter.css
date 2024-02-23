@@ -1,6 +1,6 @@
 .continent-filter{
     background-color:#FFFFFF;
-    height: 30vw;
+    min-height: 30vh;
     margin-left: 200px;
     width: 45vw;
     display: flex;
@@ -8,16 +8,23 @@
     align-items: center;
     position: absolute;
     border-radius: 30px;
-
+    position: absolute;
+ 
 }
 
 .continent{
     background-color:#FFFFFF;
-    height: 30vw;
+    min-height: 30vw;
     width: 45vw;
-    margin: 20px;
+    border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+  top: 0; 
+  left: 0; 
+  z-index: 999; 
+  background-color: #FFFFFF; 
+  padding: 10px; 
 }
 .continent-filter img{
     height: 6vw;

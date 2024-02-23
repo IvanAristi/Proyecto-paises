@@ -111,7 +111,7 @@ const getByCode = async (req,res)=>{
       return res.json(country)
     }
     res.json("Pais no encontrado")
-  } catch (error) {
+  } catch (error) { //error
     
   }
 }

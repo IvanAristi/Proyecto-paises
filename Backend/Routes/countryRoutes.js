@@ -10,4 +10,4 @@ router.put('/countries/:id', controller.updateCountries)
 router.get('/countries/:id', controller.getOneCountry)
 router.delete('/countries/:id', controller.deleteCountry)
 router.get('/countryByCode/:code',controller.getByCode);
-module.exports = router;
+module.exports = router;    
