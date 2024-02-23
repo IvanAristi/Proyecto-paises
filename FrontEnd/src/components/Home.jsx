@@ -18,7 +18,7 @@ const Home = () => {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/countries")
+    fetch(`${import.meta.env.VITE_API}/countries`)
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);

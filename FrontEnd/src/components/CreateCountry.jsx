@@ -86,7 +86,7 @@ export const CreateCountry = () => {
 
     // Verificar si el país ya está creado
     try {
-      const response = await axios.get(`http://127.0.0.1:3000/countryByCode/${newData.code}`);
+      const response = await axios.get(`${import.meta.env.VITE_API}/countryByCode/${newData.code}`);
       if (response.data && response.data.code === newData.code) {
         swal("País ya existe", "El país ya está creado en la base de datos.", "warning");
         return;
@@ -97,7 +97,7 @@ export const CreateCountry = () => {
     }
 
     // Si el país no existe, procede con la creación
-    const URL = 'http://127.0.0.1:3000/Insert';
+    const URL = `${import.meta.env.VITE_API}/Insert`;
     const settings = {
       method: 'POST',
       headers: {
