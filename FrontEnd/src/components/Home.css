@@ -26,7 +26,8 @@ html {
   padding: 40px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 210px));
-  gap: 12px;
+  grid-auto-rows: 139px;
+  gap: 16px;
   justify-content: center;
 }
 
@@ -46,6 +47,7 @@ html {
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.452);
 }
 
 .content:hover .content__items {
@@ -93,8 +95,8 @@ html {
   font-size: 15px;
   padding: 0.5em 1em;
   border-radius: 20px;
-  margin: 7px;
   color: #FEFEFF;
+  border: none;
 }
 
 #pais {
@@ -201,24 +203,59 @@ html {
   position: relative;
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.253);
-  color: white;
-  width: 100%;
-  height: 100%;
   transition: all 0.3s ease-in;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: end;
 }
 
-.content__items div {
-  height: 54%;
-  display: grid;
-  place-content: center;
+.items {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: end;
 }
 
-.content__items h2 {
-  background-color: rgb(26, 111, 190);
-  height: 34%;
-  display: grid;
-  place-content: center;
+.item {
+  display: flex;
+  padding: 0 8px;
+  gap: 18px;
+  align-items: center;
+  font-size: 0.7em;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.item picture img {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+}
+
+.item__info {
+  width: 100%;
+}
+
+.item h2 {
+  color: #009CFF;
+  margin: 0;
+  text-align: left;
+  max-width: 132px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item p {
+  margin: 0;
+  font-weight: bold;
+  color: rgb(112, 112, 112);
+  text-align: left;
+}
+
 .detailscontainer{
   background-color:rgb(243, 234, 228);
   border-radius: 12px;

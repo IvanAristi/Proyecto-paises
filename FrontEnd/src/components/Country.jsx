@@ -31,10 +31,17 @@ export default function Country({ country, setDetails }) {
         <img src={fondo} alt="fondo" />
       </picture>
       <div className="content__items">
-        <div>
-          <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt="flag" />
+        <div className="items">
+          <div className="item">
+            <picture>
+              <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt="flag" />
+            </picture>
+            <div className="item__info">
+              <h2 title={country.name}>{country.name}</h2>
+              <p>{country.continent}</p>
+            </div>
+          </div>
         </div>
-        <h2>{country.name}</h2>
       </div>
     </div>
   );

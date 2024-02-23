@@ -28,10 +28,6 @@ const Home = () => {
     setInputClicked(false);
   };
 
-  const handleInputClick = () => {
-    setInputClicked(true);
-  };
-
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
     setInputClicked(false);
@@ -71,10 +67,10 @@ const Home = () => {
                 className="Buscar"
                 value={searchTerm}
                 onChange={handleInputChange}
-
+                onFocus={() => setInputClicked(true)}
+                onBlur={() => setInputClicked(false)}
               />
             </div>
-            <span id="lupa" onClick={handleInputClick}>Buscar</span>
           </div>
         </div>
 
