@@ -9,7 +9,9 @@ export const CreateCountry = () => {
     name: "",
     code: "",
     language: "",
-    continent: ""
+    continent: "",
+    currency: "",
+    capital: ""
   });
   const formRef = useRef(null);
 
@@ -18,7 +20,9 @@ export const CreateCountry = () => {
       code: "",
       name: "",
       continent: "",
-      language: ""
+      language: "",
+      currency: "",
+      capital: ""
     });
     setOk(false);
     document.getElementById("codeInput").value = "";
@@ -34,6 +38,8 @@ export const CreateCountry = () => {
             country(code: "${codeInput}") {
               name
               code
+              capital
+              currency
               languages {
                 name
               }
@@ -51,6 +57,8 @@ export const CreateCountry = () => {
           code: countryData.code,
           name: countryData.name,
           continent: countryData.continent.name,
+          capital: countryData.capital,
+          currency: countryData.currency,
           language: countryData.languages.length > 0 ? countryData.languages[0].name : ''
         });
         setOk(true);
@@ -71,7 +79,9 @@ export const CreateCountry = () => {
       code: e.target.code.value,
       name: e.target.name.value,
       language: e.target.language.value,
-      continent: e.target.continent.value
+      continent: e.target.continent.value,
+      capital: e.target.capital.value,
+      currency: e.target.currency.value
     };
 
     // Verificar si el país ya está creado
@@ -139,8 +149,19 @@ export const CreateCountry = () => {
           <div>
             <label htmlFor="continent">Continente:</label>
             <input type="text" id="continent" name="continent" value={data.continent} onChange={e => setData({ ...data, continent: e.target.value })} />
+          </div> 
+        </div> <br /> <br /> <br />
+        <div className='content-i'>
+        <div>
+            <label htmlFor="currency">Moneda:</label>
+            <input type="text" id="currency" name="currency" value={data.currency} onChange={e => setData({ ...data, currency: e.target.value })} />
+          </div> 
+          <div>
+            <label htmlFor="capital">capital:</label>
+            <input type="text" id="capiatl" name="capital" value={data.capital} onChange={e => setData({ ...data, capital: e.target.value })} />
           </div>
         </div>
+       
 
         <div className="buttons">
           <div>

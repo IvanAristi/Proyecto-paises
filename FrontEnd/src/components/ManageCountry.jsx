@@ -50,7 +50,7 @@ const ManageCountry = () => {
       continent: "",
       capital: "",
       currency: "",
-      languages: ""
+      language: ""
     });
   };
 

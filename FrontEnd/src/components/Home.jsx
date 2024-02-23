@@ -84,7 +84,7 @@ const Home = () => {
             onContinentChange={handleContinentChange}
           />
         )}
-        <div className="countries"></div>
+        
         <section className="Cards">
           {countries.length &&
             filteredCountries.map((country) => {

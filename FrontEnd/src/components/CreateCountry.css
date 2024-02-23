@@ -67,6 +67,10 @@ align-items: last baseline;
   width: 80px;
   color: beige;
 }
+.content-i{
+  display: flex;
+  margin-left: 13%;
+}
 
 
 
