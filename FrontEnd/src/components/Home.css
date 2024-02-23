@@ -240,6 +240,9 @@ html {
     width: 100%;
     margin: 0;
   }
+  .search{
+    margin: 0;
+  }
 
   .Buscar {
     width: 100%;

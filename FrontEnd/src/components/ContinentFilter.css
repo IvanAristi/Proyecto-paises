@@ -1,6 +1,6 @@
 .continent-filter{
     background-color:#FFFFFF;
-    height: 30vw;
+    min-height: 30vh;
     margin-left: 200px;
     width: 45vw;
     display: flex;
@@ -14,7 +14,7 @@
 
 .continent{
     background-color:#FFFFFF;
-    height: 30vw;
+    min-height: 30vw;
     width: 45vw;
     border-radius: 30px;
     display: flex;

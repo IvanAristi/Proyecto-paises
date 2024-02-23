@@ -1,7 +1,7 @@
 import './CreateCountry.css';
 import { useState, useRef } from 'react';
-/* import axios from 'axios';
-import swal from 'sweetalert'; */
+ import axios from 'axios';
+ import swal from 'sweetalert'; 
 
 export const CreateCountry = () => {
   const [ok, setOk] = useState(false);
