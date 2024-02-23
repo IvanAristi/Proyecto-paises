@@ -8,7 +8,7 @@ const ManageCountry = () => {
     capital: "",
     language: "",
     continent: "",
-    currency: "", // Agrega currency al estado
+    currency: "", 
     consulta: "",
     _id: ""
   });
@@ -25,9 +25,9 @@ const ManageCountry = () => {
           name: countryData.name,
           continent: countryData.continent,
           language: countryData.language,
-          capital: countryData.capital || "", // Asigna la capital o cadena vacía si es null
-          currency: countryData.currency || "", // Asigna la moneda o cadena vacía si es null
-          consulta: countryData.code,
+          capital: countryData.capital ,
+          currency: countryData.currency,
+         consulta: countryData.code,
           id: countryData._id
         });
       })
@@ -48,7 +48,7 @@ const ManageCountry = () => {
       code: "",
       name: "",
       continent: "",
-      capital: "", // Asegúrate de limpiar capital y currency también
+      capital: "",
       currency: "",
       languages: ""
     });
