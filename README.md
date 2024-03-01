@@ -42,6 +42,7 @@ En esta fase, se han utilizado las siguientes tecnologías:
  Se eligió MongoDB como el sistema de gestión de base de datos NoSQL para almacenar la información de los países. MongoDB permite una estructura flexible para adaptarse al modelo de datos definido.
 ## Tecnologias utilizadas
 ### Mongoose:
+
  Se utilizó Mongoose, una biblioteca de modelado de objetos MongoDB para Node.js, para facilitar la interacción con la base de datos MongoDB. Mongoose proporciona una capa de abstracción sobre las operaciones de MongoDB.
 Fase 2: Integración con las APIs (countries.trevorblades - GraphQL)
 En esta fase, se han utilizado las siguientes tecnologías:
